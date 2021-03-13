@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@import "mixins";
+
+// font colors
+$darkCyan: hsl(185, 75%, 39%);
+$veryDarkDesaturedBlue: hsl(229, 23%, 23%);
+$darkGray: hsl(227, 10%, 46%);
+
+// breakpoint mobile/desktop
+
+* {
+  font-family: "Kumbh Sans";
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.profile-card-component {
+  // position: relative;
+  //border: 3px solid black;
+  min-width: 375px;
+  max-width: 1440px;
+  height: 100vh;
+  background-color: $darkCyan;
+  background-image: url(./images/bg-pattern-top.svg),
+    url(./images/bg-pattern-bottom.svg);
+  background-position: -65% 250%, 154% -194%;
+  background-repeat: no-repeat;
+  background-size: 1000px 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease;
+
+  @include breakpoint-down(desktop) {
+    background-color: $darkCyan;
+    background-position: 121% 271%, -26% -151%;
+  }
+}
+
+.profile-card {
+  margin-left: 20px;
+  margin-right: 20px;
+  background-image: url(./images/bg-pattern-card.svg);
+  background-size: 300px 125px;
+  background-repeat: no-repeat;
+  background-color: white;
+  width: 292px;
+  height: 340px;
+  border-radius: 10px;
+  text-align: center;
+
+  @include breakpoint-up(desktop) {
+    background-size: 330px 125px;
+    width: 330px;
+    height: 350px;
+  }
+}
+
+img {
+  border: 5px solid white;
+  height: 90px;
+  border-radius: 50%;
+  margin-top: 85px;
+  @include breakpoint-up(desktop) {
+    height: 100px;
+  }
+}
+
+.profile-name-age {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.profile-name {
+  font-weight: bold;
+  color: $veryDarkDesaturedBlue;
+}
+
+.profile-age {
+  color: $darkGray;
+  margin-left: 3px;
+}
+
+.profile-location {
+  color: $darkGray;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.profile-footer {
+  border-top: 0.0001px solid hsl(0, 0%, 79%);
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 40px;
+  margin-top: 24px;
+}
+
+.profile-number {
+  font-weight: bold;
+  font-size: 18px;
+  color: $veryDarkDesaturedBlue;
+}
+
+.profile-info {
+  color: $darkGray;
+  margin-top: 5px;
+  font-size: 9px;
+  letter-spacing: 0.9px;
+}

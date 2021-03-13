@@ -1,0 +1,26 @@
+// breakpoints
+@media (min-width: 64em) {
+  // styles go here
+}
+
+// 375px
+$breakpoints-up: (
+  "desktop": "376px",
+);
+
+// 639px, 1023px, 1399px
+$breakpoints-down: (
+  "desktop": "375px",
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
