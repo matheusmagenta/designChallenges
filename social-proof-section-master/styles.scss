@@ -1,0 +1,157 @@
+// font
+// Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+// Weights: 400, 500, 700
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+@import "mixins";
+
+// color variables
+$veryDarkMagenta: hsl(300, 43%, 22%);
+$softPink: hsl(333, 80%, 67%);
+$darkGrayishMagenta: hsl(303, 10%, 53%);
+$lightGrayishMagenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  font-size: 0.938rem;
+  max-width: 90rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.content {
+  margin: 8.125rem 9.875rem 6.25rem 9.875rem;
+  @include breakpoint-down(desktop) {
+    margin: 0;
+  }
+}
+
+.header {
+  display: flex;
+
+  &__intro {
+    /* width: 23rem; */
+    h1 {
+      font-size: 2.5rem;
+      color: $veryDarkMagenta;
+      @include breakpoint-down(desktop) {
+        font-size: 1.5rem;
+        width: 15.3rem;
+        height: 6.438rem;
+        margin: 4rem 4rem 0rem 1rem;
+        text-align: center;
+      }
+    }
+    p {
+      font-size: 0.75rem;
+      color: $darkGrayishMagenta;
+      margin-top: 0.875rem;
+      line-height: 1.5;
+      font-weight: 500;
+      @include breakpoint-down(desktop) {
+        width: 20rem;
+        height: 6rem;
+        margin-top: 0;
+        margin: 1.375rem 1.813rem 0rem 1.813rem;
+        text-align: center;
+      }
+    }
+  }
+
+  &__stars {
+    margin-left: 10.875rem;
+
+    > div:nth-child(2) {
+      margin-left: 2.813rem;
+    }
+    > div:nth-child(3) {
+      margin-left: 5.625rem;
+    }
+  }
+  &__star-item {
+    width: 27.5rem;
+    height: 3.438rem;
+    margin-bottom: 1.063rem;
+    border-radius: 0.5rem;
+    background-color: $lightGrayishMagenta;
+    color: $veryDarkMagenta;
+
+    font-weight: bold;
+    display: flex;
+  }
+
+  &__star-content {
+    padding: 1.25rem 1.875rem;
+  }
+
+  &__star-star {
+    margin-right: 2.125rem;
+  }
+}
+
+.footer {
+  display: flex;
+  margin-top: 4.813rem;
+
+  > div:nth-child(2) {
+    margin-top: 1rem;
+  }
+  > div:nth-child(3) {
+    margin-top: 2rem;
+  }
+
+  &__review {
+    width: 21.875rem;
+    height: 14.688rem;
+    border-radius: 0.5rem;
+    background-color: $veryDarkMagenta;
+    padding: 2.75rem 2.188rem;
+    margin-right: 1.938rem;
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    display: inline-block;
+  }
+
+  &__top {
+    width: 16.875rem;
+    display: flex;
+    > div {
+      padding-top: 0.188rem;
+    }
+  }
+
+  img {
+    border-radius: 50%;
+    height: 2.5rem;
+    margin-right: 1.375rem;
+    margin-bottom: 1.813rem;
+  }
+
+  &__author {
+    color: $white;
+    width: 100%;
+    font-weight: 700;
+  }
+
+  &__verified {
+    color: $softPink;
+
+    height: fit-content;
+  }
+
+  &__quote {
+    color: $white;
+    font-weight: 400;
+  }
+}
