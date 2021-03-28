@@ -23,7 +23,7 @@ This is a solution to the [FAQ accordion card](https://www.frontendmentor.io/cha
 
 - result
 
-  <!-- ![](./design/screenshoot-desktop.png) -->
+  ![](./design/desktop-result.jpg)
 
 **Mobile challenge**
 
@@ -33,7 +33,7 @@ This is a solution to the [FAQ accordion card](https://www.frontendmentor.io/cha
 
 - result
 
-<!--   ![](./design/screenshoot-mobile.jpg) -->
+  ![](./design/mobile-result.jpg)
 
 ## Built with
 
