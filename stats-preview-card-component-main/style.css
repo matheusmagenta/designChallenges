@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--verydarkblue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+:root {
+  --verydarkblue: hsl(233, 47%, 7%);
+  --darkdesaturatedblue: hsl(244, 38%, 16%);
+  --softviolet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --slightlytranswhite: hsla(0, 0%, 100%, 0.75);
+  --slightlytranswhite2: hsla(0, 0%, 100%, 0.6);
+}
+
+span {
+  color: var(--softviolet);
+}
+
+h1 {
+  margin: 0;
+}
+
+.description {
+  color: var(--slightlytranswhite2);
+  margin-bottom: 50px;
+}
+
+.item-numbers {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+.item-info {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  color: var(--slightlytranswhite2);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    margin-top: 30px;
+    width: 330px;
+    height: 780px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkdesaturatedblue);
+    color: var(--white);
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  img {
+    width: 330px;
+    border-radius: 5px 5px 0 0;
+    height: 240px;
+    filter: opacity(70%);
+    background-color: var(--softviolet);
+  }
+
+  .stats {
+    margin-top: 22px;
+    padding: 33px;
+  }
+
+  .numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
